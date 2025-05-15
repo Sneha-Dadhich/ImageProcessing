@@ -69,12 +69,6 @@ An interactive web-based image editing tool built with **Streamlit**, **OpenCV**
 └── README.md               # Project overview
 ```
 
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
 ## 🙌 Acknowledgements
 
 * Streamlit for interactive UI
