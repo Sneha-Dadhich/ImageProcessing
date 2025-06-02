@@ -22,7 +22,7 @@ def resize_image(uploaded_file1, size):
             img_resize = cv2.resize(image2, (1920,1080))
             print(f"Landscape : {img_resize.shape[0:2]}")
 
-        cv2.imwrite(r".\EditedImage.jpg", img_resize)
+        cv2.imwrite(r".\ImageProcessing\images\EditedImage.jpg", img_resize)
         # print(f"image_edit : {image2}")
         return img_resize
 
@@ -54,7 +54,7 @@ def apply_effect(uploaded_file1, color):
         else:
             raise ValueError("Color must be 'red', 'green', or 'blue'.")
 
-        cv2.imwrite(r".\EditedImage.jpg", image2)
+        cv2.imwrite(r".\ImageProcessing\images\EditedImage.jpg", image2)
         print(f"image_edit : {image2}")
         return image2
 
@@ -70,11 +70,11 @@ def rotate(uploaded_file1, direction):
         # Rotate based on direction
         if direction == "right":
             rotated = cv2.rotate(image, cv2.ROTATE_90_CLOCKWISE)
-            cv2.imwrite(r".\EditedImage.jpg", rotated)
+            cv2.imwrite(r".\ImageProcessing\images\EditedImage.jpg", rotated)
             
         elif direction == "left":
             rotated = cv2.rotate(image, cv2.ROTATE_90_COUNTERCLOCKWISE)
-            cv2.imwrite(r".\EditedImage.jpg", rotated)
+            cv2.imwrite(r".\ImageProcessing\images\EditedImage.jpg", rotated)
         
         return rotated
     except Exception as e:
